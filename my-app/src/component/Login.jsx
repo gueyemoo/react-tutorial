@@ -11,8 +11,10 @@ export default function Login() {
     return email.length > 0 && password.length > 0;
   }
 
-  function handleSubmit(event) {
+   function handleSubmit(event) {
     event.preventDefault();
+
+    
   }
 
   return (
