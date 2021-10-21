@@ -1,19 +1,22 @@
 import './App.css';
+
 import { Switch, Route } from 'react-router-dom';
-import Login from "./component/Login";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
 import { LinkContainer } from "react-router-bootstrap";
-import Signup from './component/Signup';
 
+// Import du composant de Login
+import Login from "./component/Login";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
   return (
     <div className="App">
-     <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
+      <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
         <LinkContainer to="/">
           <Navbar.Brand className="font-weight-bold text-muted">
             Scratch
@@ -32,15 +35,17 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-        {/* Gestion des routes */}
-        <div className="routes">
-            <Switch>
-              <Route exact path="/">
-                <Login />
-              </Route>
-            </Switch>
-          </div>
+      {/* Gestion des routes */}
+      <div className="routes">
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          {/* Ajouter votre code ici  */}
 
+          {/*FIN Ajouter votre code ici  */}
+        </Switch>
+      </div>
     </div>
 
   );
